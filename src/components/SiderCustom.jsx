@@ -14,7 +14,7 @@ class SiderCustom extends Component {
     componentDidMount() {
         const _path = this.props.path;
         this.setState({
-            openKey: _path.substr(0, _path.lastIndexOf('/')),
+           /* openKey: _path.substr(0, _path.lastIndexOf('/')),*/
             selectedKey: _path
         });
     }
