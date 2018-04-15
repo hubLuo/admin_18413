@@ -6,6 +6,8 @@ import{Router,Route,hashHistory,IndexRedirect} from "react-router";
 import BasicForm from "./components/forms/BasicForm";
 import Page from "./components/page";
 import DrapForm from "./components/forms/DrapForm.jsx";
+import BasicTable from "./components/tables/BasicTables.jsx";
+import AdvancedTable from "./components/tables/AdvancedTables.jsx";
 ReactDOM.render(
     <Router history={hashHistory}>
         <Route path={"/"} component={Page}>
@@ -16,7 +18,10 @@ ReactDOM.render(
                     <Route path={"basicForm"} component={BasicForm} />
                     <Route path={"drapform"} component={DrapForm} />
                 </Route>
-
+                <Route path={"table"}>{/*仅仅充当填充路径的作用*/}
+                    <Route path={"basicTable"} component={BasicTable} />
+                    <Route path={"advancedTable"} component={AdvancedTable} />
+                </Route>
             </Route>
         </Route>
         {/* <App /> */}
