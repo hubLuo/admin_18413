@@ -10,10 +10,13 @@ ReactDOM.render(
     <Router history={hashHistory}>
         <Route path={"/"} component={Page}>
             {/*该方式为react3*/}
-            <IndexRedirect to="/app/form" />
+            <IndexRedirect to="/app/form/DrapForm" />
             <Route path={"app"} component={App}>
-                <Route path={"form"} component={BasicForm} />
-                <Route path={"drapform"} component={DrapForm} />
+                <Route path={"form"}>{/*仅仅充当填充路径的作用*/}
+                    <Route path={"basicForm"} component={BasicForm} />
+                    <Route path={"drapform"} component={DrapForm} />
+                </Route>
+
             </Route>
         </Route>
         {/* <App /> */}

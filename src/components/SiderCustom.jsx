@@ -14,7 +14,7 @@ class SiderCustom extends Component {
     componentDidMount() {
         const _path = this.props.path;
         this.setState({
-           /* openKey: _path.substr(0, _path.lastIndexOf('/')),*/
+            openKey: _path.substr(0, _path.lastIndexOf('/')),
             selectedKey: _path
         });
     }
@@ -67,9 +67,9 @@ class SiderCustom extends Component {
                         key="/app/form"
                         title={<span><Icon type="edit" /><span className="nav-text">表单</span></span>}
                     >
-
+                        {/*key 可以随意写，但必须要唯一*/}
                         <Menu.Item key="/app/basicForm"><Link to={'/app/form/basicForm'}>基础表单</Link></Menu.Item>
-                        <Menu.Item key="/app/wrappedform"><Link to={'/app/form/wrappedform'}>复杂表单</Link></Menu.Item>
+                        <Menu.Item key="/app/drapform"><Link to={'/app/form/drapform'}>复杂表单</Link></Menu.Item>
                     </SubMenu>
                 </Menu>
                 <style>

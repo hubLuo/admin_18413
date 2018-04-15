@@ -10,7 +10,8 @@ class App extends Component{
     render(){
         return(
             <Layout>
-                <Sider />
+                {/*要实现点击导航跳转，需要进行路径的传递*/}
+                <Sider path={this.props.location.pathname} />
                 <Layout>
                     <Header />
                     <Content style={{ margin: '0 16px',overflow:"initial" }}>
