@@ -14,7 +14,8 @@ class App extends Component{
                 <Layout>
                     <Header />
                     <Content style={{ margin: '0 16px',overflow:"initial" }}>
-                     Hello
+                        {/*子组件渲染*/}
+                        {this.props.children}
                     </Content>
                     <Footer style={{ textAlign: 'center' }}>
                         Ant Design ©2016 Created by Ant UED

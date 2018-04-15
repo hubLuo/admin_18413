@@ -6,8 +6,9 @@ import{Router,Route,hashHistory,IndexRedirect} from "react-router";
 import BasicForm from "./components/forms/BasicForm"
 ReactDOM.render(
     <Router history={hashHistory}>
-        <Route path={"app"} component={App}></Route>
-        <Route path={"form"} component={BasicForm}></Route>
+        <Route path={"app"} component={App}>
+            <Route path={"form"} component={BasicForm}></Route>
+        </Route>
         {/* <App /> */}
     </Router>,
     document.getElementById('root')
