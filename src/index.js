@@ -24,6 +24,7 @@ import Notifications from './components/ui/Notifications';
 import Tabs from './components/ui/Tabs';
 import Wysiwyg from './components/ui/Wysiwyg';
 import Drags from './components/ui/Draggable';
+import Gallery from './components/ui/Gallery';//画廊
 
 //图表组件
 import Echarts from './components/charts/Echarts';
@@ -57,6 +58,7 @@ ReactDOM.render(
                     <Route path={'tabs'} component={Tabs} />
                     <Route path={'wysiwyg'} component={Wysiwyg} />
                     <Route path={'drags'} component={Drags} />
+                    <Route path={'gallery'} component={Gallery} />
                 </Route>
                 <Route path={'chart'}>
                     <Route path={'echarts'} component={Echarts} />
