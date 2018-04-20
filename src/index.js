@@ -18,6 +18,7 @@ import Login from './components/pages/Login';
 import Icons from './components/ui/Icons';
 import Buttons from './components/ui/Buttons';
 import Spins from './components/ui/Spins';
+import Banners from './components/ui/banners';//轮播图
 //图表组件
 import Echarts from './components/charts/Echarts';
 import Recharts from './components/charts/Recharts';
@@ -42,6 +43,7 @@ ReactDOM.render(
                     <Route path={'icons'} component={Icons} />
                     <Route path={'buttons'} component={Buttons} />
                     <Route path={'spins'} component={Spins} />
+                    <Route path={'banners'} component={Banners} />
                 </Route>
                 <Route path={'chart'}>
                     <Route path={'echarts'} component={Echarts} />
