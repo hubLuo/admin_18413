@@ -70,6 +70,7 @@ class SiderCustom extends Component {
                         {/*key 可以随意写，但必须要唯一*/}
                         <Menu.Item key="/app/basicForm"><Link to={'/app/form/basicForm'}>基础表单</Link></Menu.Item>
                         <Menu.Item key="/app/drapform"><Link to={'/app/form/drapform'}>复杂表单</Link></Menu.Item>
+                        <Menu.Item key="/app/table/asynchronousTable"><Link to={'/app/table/asynchronousTable'}>异步表格</Link></Menu.Item>
                     </SubMenu>
                 </Menu>
                 <style>
