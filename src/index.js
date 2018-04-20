@@ -22,6 +22,8 @@ import Banners from './components/ui/banners';//轮播图
 //图表组件
 import Echarts from './components/charts/Echarts';
 import Recharts from './components/charts/Recharts';
+//404页面
+import NotFound from './components/pages/NotFound';
 
 ReactDOM.render(
     <Router history={hashHistory}>
@@ -53,6 +55,8 @@ ReactDOM.render(
         </Route>
         {/* 登入页链接*/}
         <Route path={'login'} components={Login} />
+        {/* 404链接*/}
+        <Route path={'404'} component={NotFound} />
     </Router>,
     document.getElementById('root')
 );
