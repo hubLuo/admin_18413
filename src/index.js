@@ -12,11 +12,14 @@ import DrapForm from "./components/forms/DrapForm.jsx";
 import BasicTable from "./components/tables/BasicTables.jsx";
 import AdvancedTable from "./components/tables/AdvancedTables.jsx";
 import AsynchronousTable from './components/tables/AsynchronousTable';
+//登入页
+import Login from './components/pages/Login';
 ReactDOM.render(
     <Router history={hashHistory}>
         <Route path={"/"} component={Page}>
             {/*该方式为react3*/}
             <IndexRedirect to="/app/form/DrapForm" />
+            {/* app应用链接*/}
             <Route path={"app"} component={App}>
                 <Route path={"form"}>{/*仅仅充当填充路径的作用*/}
                     <Route path={"basicForm"} component={BasicForm} />
@@ -29,7 +32,8 @@ ReactDOM.render(
                 </Route>
             </Route>
         </Route>
-        {/* <App /> */}
+        {/* 登入页链接*/}
+        <Route path={'login'} components={Login} />
     </Router>,
     document.getElementById('root')
 );
