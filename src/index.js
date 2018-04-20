@@ -20,6 +20,7 @@ import Buttons from './components/ui/Buttons';
 import Spins from './components/ui/Spins';
 import Banners from './components/ui/banners';//轮播图
 import Modals from './components/ui/Modals';
+import Notifications from './components/ui/Notifications';
 
 //图表组件
 import Echarts from './components/charts/Echarts';
@@ -49,6 +50,7 @@ ReactDOM.render(
                     <Route path={'spins'} component={Spins} />
                     <Route path={'banners'} component={Banners} />
                     <Route path={'modals'} component={Modals} />
+                    <Route path={'notifications'} component={Notifications} />
                 </Route>
                 <Route path={'chart'}>
                     <Route path={'echarts'} component={Echarts} />
