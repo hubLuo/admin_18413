@@ -14,6 +14,12 @@ import AdvancedTable from "./components/tables/AdvancedTables.jsx";
 import AsynchronousTable from './components/tables/AsynchronousTable';
 //登入页
 import Login from './components/pages/Login';
+//UI组件
+import Icons from './components/ui/Icons';
+import Buttons from './components/ui/Buttons';
+import Spins from './components/ui/Spins';
+
+
 ReactDOM.render(
     <Router history={hashHistory}>
         <Route path={"/"} component={Page}>
@@ -29,6 +35,11 @@ ReactDOM.render(
                     <Route path={"basicTable"} component={BasicTable} />
                     <Route path={"advancedTable"} component={AdvancedTable} />
                     <Route path={'asynchronousTable'} components={AsynchronousTable} />
+                </Route>
+                <Route path={'ui'}>
+                    <Route path={'icons'} component={Icons} />
+                    <Route path={'buttons'} component={Buttons} />
+                    <Route path={'spins'} component={Spins} />
                 </Route>
             </Route>
         </Route>
