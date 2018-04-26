@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
 import { Menu, Icon, Layout, Badge } from 'antd';
+//全屏
+import screenfull from 'screenfull';
 const { Header} = Layout;
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 
 class HeaderCustom extends Component{
+    screenFull = () => {
+        if (screenfull.enabled) {
+            screenfull.request();
+        }
+    };
     render () {
         return (
             <Header style={{ background: '#fff', padding: 0, height: 65 }} >
@@ -12,6 +19,9 @@ class HeaderCustom extends Component{
                     mode="horizontal"
                     style={{ lineHeight: '64px', float: 'right' }}
                 >
+                    <Menu.Item key="full" onClick={this.screenFull} >
+                        <Icon type="arrows-alt" onClick={this.screenFull} />
+                    </Menu.Item>
                     <Menu.Item key="1">
                         <Badge count={25} overflowCount={10} style={{marginLeft: 10}}>
                             <Icon type="notification" />
