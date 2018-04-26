@@ -18,6 +18,9 @@ class SiderCustom extends Component {
             selectedKey: _path
         });
     }
+ /*   componentWillReceivePorps(nextProps){
+        this.onCollapse(nextProps.collapsed);
+    }*/
     onCollapse = (collapsed) => {
         console.log(collapsed);
         this.setState({
@@ -41,10 +44,12 @@ class SiderCustom extends Component {
     render() {
         return (
             <Sider
+                trigger={null}
                 breakpoint="lg"
                 collapsible
-                collapsed={this.state.collapsed}
+                collapsed={this.props.collapsed}
                 onCollapse={this.onCollapse}
+                style={{overflowY:"auto"}}
             >
                 <div className="logo" />
                 <Menu

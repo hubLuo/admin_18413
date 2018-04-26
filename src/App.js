@@ -21,7 +21,7 @@ class App extends Component{
         return(
             <Layout>
                 {/*要实现点击导航跳转，需要进行路径的传递*/}
-                <Sider path={this.props.location.pathname} />
+                <Sider path={this.props.location.pathname} collapsed={this.state.collapsed} />
                 <Layout>
                     <Header toggle={this.toggle} />
                     <Content style={{ margin: '0 16px',overflow:"initial" }}>
