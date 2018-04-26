@@ -32,6 +32,11 @@ import Recharts from './components/charts/Recharts';
 //404页面
 import NotFound from './components/pages/NotFound';
 
+//动画组件
+import "./style/lib/animate.css";
+import BasicAnimations from "./components/animation/BasicAnimations";
+import ExampleAnimations from "./components/animation/ExampleAnimations";
+
 ReactDOM.render(
     <Router history={hashHistory}>
         <Route path={"/"} component={Page}>
@@ -63,6 +68,10 @@ ReactDOM.render(
                 <Route path={'chart'}>
                     <Route path={'echarts'} component={Echarts} />
                     <Route path={'recharts'} component={Recharts} />
+                </Route>
+                <Route path={'animation'}>
+                    <Route path={'basicanimations'} component={BasicAnimations} />
+                    <Route path={'exampleanimations'} component={ExampleAnimations} />
                 </Route>
             </Route>
         </Route>

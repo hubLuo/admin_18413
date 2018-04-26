@@ -103,6 +103,15 @@ class SiderCustom extends Component {
                         <Menu.Item key="/app/drapform"><Link to={'/app/form/drapform'}>复杂表单</Link></Menu.Item>
 
                     </SubMenu>
+                    <SubMenu
+                        key="/app/animation"
+                        title={<span><Icon type="edit" /><span className="nav-text">动画</span></span>}
+                    >
+                        {/*key 可以随意写，但必须要唯一*/}
+                        <Menu.Item key="/app/basicanimations"><Link to={'/app/animation/basicanimations'}>基础动画</Link></Menu.Item>
+                        <Menu.Item key="/app/exampleanimations"><Link to={'/app/animation/exampleanimations'}>动画案例</Link></Menu.Item>
+
+                    </SubMenu>
                 </Menu>
                 <style>
                     {`
