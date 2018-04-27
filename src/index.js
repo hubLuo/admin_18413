@@ -36,12 +36,14 @@ import NotFound from './components/pages/NotFound';
 import "./style/lib/animate.css";
 import BasicAnimations from "./components/animation/BasicAnimations";
 import ExampleAnimations from "./components/animation/ExampleAnimations";
+//控制面板
+import Dashboard from './components/dashboard/Dashboard'
 
 ReactDOM.render(
     <Router history={hashHistory}>
         <Route path={"/"} component={Page}>
             {/*该方式为react3*/}
-            <IndexRedirect to="/app/form/DrapForm" />
+            <IndexRedirect to="/app/dashboard/index" />
             {/* app应用链接*/}
             <Route path={"app"} component={App}>
                 <Route path={"form"}>{/*仅仅充当填充路径的作用*/}
@@ -73,6 +75,7 @@ ReactDOM.render(
                     <Route path={'basicanimations'} component={BasicAnimations} />
                     <Route path={'exampleanimations'} component={ExampleAnimations} />
                 </Route>
+                <Route path={'dashboard/index'} component={Dashboard} />
             </Route>
         </Route>
         {/* 登入页链接*/}

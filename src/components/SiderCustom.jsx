@@ -60,6 +60,9 @@ class SiderCustom extends Component {
                     openKeys={[this.state.openKey]}
                     onOpenChange={this.openMenu}
                 >
+                    <Menu.Item key="/app/dashboard/index">
+                        <Link to={'/app/dashboard/index'}><Icon type="mobile" /><span className="nav-text">首页</span></Link>
+                    </Menu.Item>
                     <SubMenu
                         key="/app/chart"
                         title={<span><Icon type="area-chart" /><span className="nav-text">图表</span></span>}

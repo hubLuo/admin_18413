@@ -29,7 +29,7 @@ class App extends Component{
                         {this.props.children}
                     </Content>
                     <Footer style={{ textAlign: 'center' }}>
-                        Ant Design ©2016 Created by Ant UED
+                        组件集合 ©2018 Created by LQ
                     </Footer>
                 </Layout>
             </Layout>
