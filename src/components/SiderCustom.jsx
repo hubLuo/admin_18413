@@ -15,6 +15,7 @@ class SiderCustom extends Component {
         this.setMenuOpen(this.props);
     }
    componentWillReceiveProps(nextProps){
+       //注意这里不要使用this.props，它此时是一个旧数据，而nextProps表示了一个新的，变化了的数据。
        console.log("componentWillReceiveProps--",nextProps);
        this.onCollapse(nextProps.collapsed);
        this.setMenuOpen(nextProps);
