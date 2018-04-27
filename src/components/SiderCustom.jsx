@@ -18,14 +18,15 @@ class SiderCustom extends Component {
             selectedKey: _path
         });
     }
- /*   componentWillReceivePorps(nextProps){
-        this.onCollapse(nextProps.collapsed);
-    }*/
+   componentWillReceiveProps(nextProps){
+       console.log("componentWillReceiveProps");
+       this.onCollapse(nextProps.collapsed);
+    }
     onCollapse = (collapsed) => {
-        console.log(collapsed);
+        console.log(collapsed,"使用生命周期componentWillReceiveProps钩子来改变state");
         this.setState({
             collapsed,
-            mode: collapsed ? 'vertical' : 'inline',
+            mode: collapsed ? 'vertical' : 'inline'
         });
     };
     menuClick = e => {
@@ -43,12 +44,12 @@ class SiderCustom extends Component {
     };
     render() {
         return (
+
             <Sider
                 trigger={null}
                 breakpoint="lg"
                 collapsible
-                collapsed={this.props.collapsed}
-                onCollapse={this.onCollapse}
+                collapsed={this.state.collapsed}
                 style={{overflowY:"auto"}}
             >
                 <div className="logo" />
